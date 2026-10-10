@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Muhammad Luqman Arshad, BS Computer Science student and aspiring front-end developer.">
+  <title>Muhammad Luqman Arshad | Portfolio</title>
+  <style>
+    :root {
+      --bg: #f7f7fb;
+      --surface: #ffffff;
+      --text: #202338;
+      --muted: #697087;
+      --accent: #6c63ff;
+      --accent-soft: #eeedff;
+      --border: #e8e8f1;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top right, #eeedff 0, transparent 34%), var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1040px, 90%); margin: 0 auto; }
+    header { padding: 22px 0; }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { font-weight: 800; letter-spacing: -.04em; }
+    .brand span { color: var(--accent); }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 20px; color: var(--muted); font-size: .94rem; }
+    .nav-links a:hover { color: var(--accent); }
+    .hero { padding: 76px 0 68px; display: grid; grid-template-columns: 1.5fr .8fr; gap: 44px; align-items: center; }
+    .eyebrow { display: inline-block; background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 6px 13px; font-size: .83rem; font-weight: 700; }
+    h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.08; letter-spacing: -.06em; margin: 18px 0; }
+    h1 span { color: var(--accent); }
+    .hero p { color: var(--muted); max-width: 600px; font-size: 1.08rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .btn { display: inline-block; padding: 11px 17px; border-radius: 12px; font-weight: 700; border: 1px solid var(--border); transition: transform .2s, box-shadow .2s; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px #29245a14; }
+    .btn-primary { color: white; background: var(--accent); border-color: var(--accent); }
+    .profile-card { background: var(--surface); border: 1px solid var(--border); border-radius: 26px; padding: 28px; box-shadow: 0 18px 50px #29245a0b; }
+    .avatar { width: 76px; height: 76px; display: grid; place-items: center; border-radius: 22px; background: linear-gradient(135deg, #6c63ff, #a49eff); color: white; font-size: 1.6rem; font-weight: 800; margin-bottom: 20px; }
+    .profile-card h2 { margin: 0 0 4px; font-size: 1.25rem; }
+    .profile-card p { margin: 0; color: var(--muted); }
+    .mini-info { display: flex; justify-content: space-between; gap: 12px; padding-top: 15px; margin-top: 15px; border-top: 1px solid var(--border); font-size: .92rem; }
+    .mini-info strong { text-align: right; }
+    section { padding: 38px 0; }
+    .section-heading { margin-bottom: 22px; }
+    .section-heading h2 { font-size: clamp(1.65rem, 3vw, 2.15rem); letter-spacing: -.04em; margin: 0; }
+    .section-heading p { margin: 5px 0 0; color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 23px; }
+    .card h3 { margin: 0 0 8px; }
+    .card p { color: var(--muted); margin: 0; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 14px; }
+    .tag { background: var(--accent-soft); color: #5148ce; padding: 5px 10px; border-radius: 9px; font-size: .84rem; font-weight: 650; }
+    .timeline { border-left: 2px solid #d9d6ff; padding-left: 20px; }
+    .timeline .card { position: relative; }
+    .timeline .card::before { content: ""; position: absolute; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); left: -26px; top: 28px; }
+    footer { margin-top: 35px; border-top: 1px solid var(--border); padding: 24px 0 34px; text-align: center; color: var(--muted); font-size: .9rem; }
+    @media (max-width: 720px) {
+      .hero { grid-template-columns: 1fr; padding-top: 48px; gap: 28px; }
+      .grid { grid-template-columns: 1fr; }
+      nav { align-items: flex-start; flex-direction: column; }
+      .nav-links { gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <nav aria-label="Main navigation">
+      <a class="brand" href="#home">MLA<span>.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div>
+        <span class="eyebrow">BS Computer Science Student</span>
+        <h1>Muhammad Luqman <span>Arshad</span></h1>
+        <p>I'm a Computer Science student at LGU with a growing interest in front-end development. I'm learning how to turn ideas into clean, responsive, and user-friendly websites.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#about">Get to know me</a>
+          <a class="btn" href="#experience">My experience</a>
+        </div>
+      </div>
+      <aside class="profile-card" aria-label="Profile summary">
+        <div class="avatar">MLA</div>
+        <h2>Muhammad Luqman Arshad</h2>
+        <p>Aspiring Front-End Developer</p>
+        <div class="mini-info"><span>Roll Number</span><strong>262</strong></div>
+        <div class="mini-info"><span>University</span><strong>LGU</strong></div>
+        <div class="mini-info"><span>Current focus</span><strong>Web Development</strong></div>
+      </aside>
+    </section>
+
+    <section class="container" id="about">
+      <div class="section-heading">
+        <h2>About Me</h2>
+        <p>A little introduction.</p>
+      </div>
+      <div class="card">
+        <p>I'm Muhammad Luqman Arshad, a BS Computer Science student at LGU. I enjoy learning about web technologies and building simple, attractive digital experiences. My goal is to become a skilled front-end programmer, strengthen my coding fundamentals, and keep improving through practical projects and teamwork.</p>
+      </div>
+    </section>
+
+    <section class="container" id="education">
+      <div class="section-heading">
+        <h2>Education</h2>
+        <p>My academic background.</p>
+      </div>
+      <div class="card">
+        <h3>BS Computer Science</h3>
+        <p>Lahore Garrison University (LGU)</p>
+        <div class="tag-list"><span class="tag">Computer Science</span><span class="tag">Student</span><span class="tag">Roll No. 262</span></div>
+      </div>
+    </section>
+
+    <section class="container" id="experience">
+      <div class="section-heading">
+        <h2>Experience</h2>
+        <p>Learning through real-world exposure.</p>
+      </div>
+      <div class="timeline">
+        <div class="card">
+          <h3>Software House Intern</h3>
+          <p>Currently doing an internship at a software house, gaining practical exposure to a professional development environment and learning how software teams approach real projects. I'm especially interested in front-end tasks and improving my web development skills.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="skills">
+      <div class="section-heading">
+        <h2>Skills & Interests</h2>
+        <p>Areas I'm exploring and developing.</p>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <h3>Current interests</h3>
+          <div class="tag-list"><span class="tag">Front-End Development</span><span class="tag">Responsive Design</span><span class="tag">UI Design</span></div>
+        </div>
+        <div class="card">
+          <h3>Learning mindset</h3>
+          <p>Building a strong foundation, practicing consistently, and learning new tools step by step. I plan to add more specific technical skills and projects as I gain experience.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">Made with care by Muhammad Luqman Arshad · Portfolio</div>
+  </footer>
+</body>
+</html>
